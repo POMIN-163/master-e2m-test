@@ -45,7 +45,7 @@ struct SDO_Object {
     bool auto_refresh;
 };
 
-#include "e2m/output/ecat_master_data.c"
+#include "e2m/output/ecat_master_data.h"
 
 static bool auto_refresh_enabled = true;
 static int refresh_interval_ms = 500;
@@ -528,7 +528,7 @@ void* thread_func_ecat(void *arg)
     for (;;)
     {
         should_refresh = true;
-        usleep(5000);
+        usleep(50000);
     }
     return NULL;
 }
