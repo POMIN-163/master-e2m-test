@@ -1,0 +1,14 @@
+// ===== EtherCAT → Modbus RTU 映射表（自动生成）=====
+// 生成时间: {{ now.strftime("%Y-%m-%d %H:%M:%S") }}
+// 共 {{ od|length }} 个对象
+
+e2m_mdata_t mdata_list[] = {
+{% for item in od %}
+    { {{ item.index }}, 0x{{ "%02X"|format(item.modbus_dev) }}, 0x{{ "%04X"|format(item.modbus_reg) }}, "{{ item.name }}" }{{ "," if not loop.last else "" }}{% if item.comment %}  // {{ item.comment }}{% endif %}
+
+{% endfor %}
+};
+
+UINT16 mdata_count = {{ od|length }};
+
+// ==============================================

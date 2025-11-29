@@ -1,0 +1,14 @@
+{% for item in od %}
+    <Object>
+        <Index>#x{{ "%04X"|format(item.index|int(0,16)) }}</Index>
+        <Name>{{ item.name }}</Name>
+        <Type>{{ "UINT" if item.type|default("uint16") == "uint16" else "UDINT" }}</Type>
+        <BitSize>{{ 16 if item.type|default("uint16") == "uint16" else 32 }}</BitSize>
+        <Info>
+            <Description>{{ item.comment|default("") }}</Description>
+        </Info>
+        <Flags>
+            <Access>{{ item.access|default("rw") }}</Access>
+        </Flags>
+    </Object>
+{% endfor %}

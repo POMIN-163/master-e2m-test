@@ -1,0 +1,74 @@
+{
+  "od": [
+    {
+      "index": "0x3000",
+      "name": "状态字",
+      "modbus_dev": 1,
+      "modbus_reg": 0,
+      "comment": "设备1运行状态"
+    },
+    {
+      "index": "0x3001",
+      "name": "转速设定",
+      "modbus_dev": 1,
+      "modbus_reg": 1,
+      "comment": "目标转速"
+    },
+    {
+      "index": "0x3002",
+      "name": "实际转速",
+      "modbus_dev": 1,
+      "modbus_reg": 2,
+      "comment": "当前转速"
+    },
+    {
+      "index": "0x3003",
+      "name": "运行电流",
+      "modbus_dev": 1,
+      "modbus_reg": 3,
+      "comment": "电流反馈"
+    },
+    {
+      "index": "0x3004",
+      "name": "阀门开度",
+      "modbus_dev": 2,
+      "modbus_reg": 16,
+      "comment": "调节阀开度"
+    },
+    {
+      "index": "0x3005",
+      "name": "管道压力",
+      "modbus_dev": 2,
+      "modbus_reg": 1,
+      "comment": "压力值"
+    },
+    {
+      "index": "0x3006",
+      "name": "环境温度",
+      "modbus_dev": 3,
+      "modbus_reg": 2,
+      "comment": "温度传感器"
+    },
+    {
+      "index": "0x3007",
+      "name": "故障代码",
+      "modbus_dev": 1,
+      "modbus_reg": 5,
+      "comment": "报警信息"
+    },
+    {
+      "index": "0x3008",
+      "name": "运行时间高",
+      "modbus_dev": 1,
+      "modbus_reg": 4,
+      "comment": "累计运行时间高16位"
+    },
+    {
+      "index": "0x3009",
+      "name": "运行时间低",
+      "modbus_dev": 1,
+      "modbus_reg": 9,
+      "comment": "累计运行时间低16位"
+    }
+  ]
+}

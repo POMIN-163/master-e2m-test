@@ -1,0 +1,13 @@
+// ===== 主站 SDO 对象配置（自动生成）=====
+// 生成时间: {{ now.strftime("%Y-%m-%d %H:%M:%S") }}
+// 共 {{ od|length }} 个对象
+
+static SDO_Object sdo_objects[] = {
+{% for item in od %}
+    { {{ item.index }}, u8"{{ item.name }}", 0, "", true }{{ "," if not loop.last else "" }} // {{ item.comment }}  设备 {{ item.modbus_dev}} 寄存器 {{item.modbus_reg }}
+{% endfor %}
+};
+
+static const int sdo_count = {{ od|length }};
+
+// ==============================================
